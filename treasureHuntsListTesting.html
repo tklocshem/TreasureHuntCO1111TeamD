@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive viewport settings -->
+    <title>Unit Test - Treasure Hunts List</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header id="header">
+        <div id="headerContent">
+            <div id="align">
+                <div id="headerContainer1">
+                    <a href="index.html"><img src="media/Banner2.png" id="greenHeaderLogo" alt="Treasure Hunt Logo"></a>
+                </div>
+                <div id="headerContainer2">
+                    <h4>Code Cyprus</h4>
+                </div>
+            </div>
+            <nav id="nav">
+                <ul id="navList" class="closed">
+                    <!-- Home button -->
+                    <li class="navItem">
+                        <a class="navLink" href="index.html">HOME</a>
+                    </li>
+                    <!-- Testing button -->
+                    <li class="navItem">
+                        <a href="test.html" class="navLink">TESTING</a>
+                    </li>
+                    <!-- Refresh button -->
+                    <li class="navItem">
+                        <a onclick="refresh()" class="navLink">REFRESH</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Test run section -->
+    <div id="testRunDiv">
+        <h2 id="unitTestHeader">Unit Test - Treasure Hunts List</h2>
+        <!-- Input field for number of treasure hunts -->
+        <input type="number" step="1" id="numOfTreasureHuntsInput" placeholder="Enter number of THS"/>
+        <!-- Button to run the test -->
+        <input class="testButtons" type="button" onclick="runTest()" value="Run Test"/>
+        <!-- Button to run automated test -->
+        <input class="testButtons" type="button" onclick="runAutomatedTest()" value="Run Automated Test"/>
+    </div>
+    <!-- Table to display test cases -->
+    <div>
+        <table id="testResultsTable">
+            <thead>
+            <tr>
+                <th class="tableHeader">Input</th>
+                <th class="tableHeader">Expected Output</th>
+            </tr>
+            </thead>
+            <tbody id="testCasesBody">
+            <!-- Test cases will be populated here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let testValues = [-1, 0, 1, 2, 10, null, ""]; // Array of test values
+
+        const testCasesBody = document.getElementById("testCasesBody");
+
+        // Function to run automated test
+        async function runAutomatedTest(){
+            testCasesBody.innerHTML = "";
+            for (let i = 0; i <testValues.length; i++) {
+                const input = testValues[i];
+                const expectedOutput = await getTreasureHunts(input);
+
+                testCasesBody.innerHTML += "<tr>" + "<td class='tableData'>" + input + "</td>"
+                    + "<td class='tableData'>" + expectedOutput + "</td>" + "</tr>";
+            }
+        }
+
+        // Function to run manual test
+        function runTest(){
+            testCasesBody.innerHTML = "";
+            // Get number of treasure hunts from input field
+            const numOfTreasureHuntsInput = document.getElementById("numOfTreasureHuntsInput");
+            const numOfTreasureHunts = numOfTreasureHuntsInput.value;
+            getTreasureHunts(numOfTreasureHunts).then(value => {
+
+                testCasesBody.innerHTML += "<tr>" + "<td class='tableData'>" + numOfTreasureHunts + "</td>"
+                    + "<td class='tableData'>" + value + "</td>" + "</tr>";
+            });
+        }
+
+        // Function to fetch treasure hunts data from API
+        async function getTreasureHunts(numOfTreasureHunts) {
+            // Fetch treasure hunts data
+            return await fetch(`https://codecyprus.org/th/test-api/list?number-of-ths=${numOfTreasureHunts}`)
+                .then(response => response.json())
+                .then(jsonObject => {
+                    const status = jsonObject.status;
+                    if (status === "OK") {
+                        let treasureHunts = jsonObject.treasureHunts;
+                        return treasureHunts.length;
+                    }
+                    else {
+                        return false;
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
