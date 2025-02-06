@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookies</title>
+</head>
+<body>
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else {
+            alert("Geolocation is not supported by your browser.");
+        }
+    }
+    function showPosition(position) {
+        position.coords.latitude //Get the latitude
+        position.coords.longitude //Get the longitude
+        alert("latitude: " + position.coords.latitude + ", longitude: " + position.coords.longitude);
+    }
+
+    getLocation();
+
+
+    function printHello() {
+        console.log("Hello!");
+    }
+    setInterval(printHello, 1000);
+
+</script>
+</body>
+</html>
