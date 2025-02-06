@@ -42,9 +42,7 @@ let thcJSONResponse = '{\n' +
 const TH_BASE_URL = "https://codecyprus.org/th/api/"; // the true API base url
 const TH_TEST_URL = "https://codecyprus.org/th/test-api/"; // the test API base url
 
- @return {Promise<void>}
- */
-
+ return {Promise<void>}
 async function doList() {
 
     // call the web service and await for the reply to come back and be converted to JSON
