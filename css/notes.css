@@ -1,0 +1,144 @@
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.list li:hover {
+    transform: scale(1.01);
+}
+
+h2.date {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* General Profile Card Styling */
+.profile-card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+}
+
+/* Team Leader Highlight */
+.leader {
+    border-left: 5px solid var(--primary);
+    background-color: rgba(13, 114, 253, 0.1);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px; /* Square on desktop */
+    margin-right: 20px;
+}
+
+/* Profile Details */
+.profile-details {
+    flex: 1;
+}
+
+.name {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: bold;
+}
+
+.position {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.role {
+    font-size: 0.95rem;
+    color: var(--light-gray);
+}
+
+/* Email Styling */
+.email a {
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive: Mobile View */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; /* Rounded on mobile */
+        margin: 0 auto 10px;
+    }
+}
+
+
+/* Paragraph Text */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--light-gray);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--footer);
+    font-size: 14px;
+    margin-top: 30px;
+}
+footer p{
+    color: var(--white);
+}
