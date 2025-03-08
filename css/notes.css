@@ -40,7 +40,7 @@ h2.date {
     margin-bottom: 10px;
     font-weight: bold;
 }
-/* General Profile Card Styling */
+
 .profile-card {
     display: flex;
     align-items: center;
@@ -48,8 +48,9 @@ h2.date {
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    gap: 1rem;
 }
 
 .profile-card:hover {
@@ -62,16 +63,16 @@ h2.date {
     background-color: rgba(13, 114, 253, 0.1);
 }
 
-/* Profile Picture */
+
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px; /* Square on desktop */
     margin-right: 20px;
 }
 
-/* Profile Details */
+
 .profile-details {
     flex: 1;
 }
@@ -94,7 +95,6 @@ h2.date {
     color: var(--light-gray);
 }
 
-/* Email Styling */
 .email a {
     font-size: 0.9rem;
     color: var(--primary);
@@ -104,10 +104,9 @@ h2.date {
 
 .email a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
 }
 
-/* Responsive: Mobile View */
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column;
@@ -118,20 +117,19 @@ h2.date {
     .profile-pic {
         width: 100px;
         height: 100px;
-        border-radius: 50%; /* Rounded on mobile */
+        border-radius: 50%;
         margin: 0 auto 10px;
     }
 }
 
 
-/* Paragraph Text */
+
 p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--light-gray);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 15px;
