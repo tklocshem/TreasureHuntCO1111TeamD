@@ -9,8 +9,28 @@
 </head>
 <body>
 
-<header>
-    <h1>Development Team Updates</h1>
+<header class="sticky-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html" class="btn">
+                <img src="assets/logos/treasure.png" alt="TeamD Logo">
+            </a>
+        </div>
+        <h1>Development Team Updates</h1>
+
+        <!-- Burger Menu for Mobile -->
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="nav-links">
+            <a href="notes.html" class="btn">Notes</a>
+            <a href="test.html" class="btn">Test</a>
+        </nav>
+    </div>
 </header>
 
 <main>
@@ -151,6 +171,6 @@
 <footer>
     <p>&copy; 2025 Development Team D. All Rights Reserved.</p>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>

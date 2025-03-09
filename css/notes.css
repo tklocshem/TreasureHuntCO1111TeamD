@@ -1,15 +1,10 @@
-
-header {
-    background-color: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 10px;
+.sticky-header h1{
     font-size: 1rem;
 }
 
 main {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 5rem auto 1rem;
     padding: 20px;
     background: white;
     border-radius: 8px;
@@ -104,7 +99,7 @@ h2.date {
 
 .email a:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: var(--primary-hover);
 }
 
 @media (max-width: 768px) {
