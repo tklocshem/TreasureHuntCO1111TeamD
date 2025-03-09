@@ -18,3 +18,7 @@ document.addEventListener('click', (event) => {
         burgerMenu.classList.remove('open');
     }
 });
+
+
+
+

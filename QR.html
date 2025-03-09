@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link rel="stylesheet" href="css/QR.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/instascan.min.js"></script>
+    <script src="js/QR.js" defer></script>
+</head>
+<body>
+<main>
+    <h1>QR Code Scanner</h1>
+    <button id="startBtn">Start QR Camera</button>
+    <button id="switchCamBtn" style="display:none;">Switch Camera</button>
+    <button id="stopBtn" style="display:none;">Stop Camera</button>
+    <video id="preview"></video>
+    <div id="content"></div>
+</main>
+</body>
+</html>
