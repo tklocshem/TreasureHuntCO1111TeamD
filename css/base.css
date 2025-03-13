@@ -27,14 +27,16 @@ body {
 
 
 .sticky-header {
+    text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     background: white;
     padding: 10px 20px;
     color: var(--primary);
-    z-index: 1000;
+    z-index: 2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
 }
 
 .sticky-header h1{
@@ -42,8 +44,6 @@ body {
 }
 
 .header-container {
-    max-width: 1200px;
-    margin: 0 1rem auto auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
