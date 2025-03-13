@@ -128,7 +128,7 @@ function getAnswer(sessionID, QType){
             console.log(Congrats);
             i.innerHTML+="<div id='secondWrap'>" +
                 "<h1 id='congratulation'>"+Congrats+"</h1>" +
-                "<p id='scoreAdjustment'>You got +"+scorAdjustment+"</p>" +
+                "<p id='scoreAdjustment'>You got +"+scoreIncrem+"</p>" +
                 "<input type='button' value='Continue' onclick='getQuestion("+JSON.stringify(sessionID)+")'>" +
                 "</div>";
         });
@@ -139,12 +139,12 @@ function skipQuestion(sessionID){
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject => {
             var Congrats = jsonObject.message;
-            var scorAdjustment = jsonObject.scoreAdjustment;
+            var scorIncrem = jsonObject.scoreIncrem;
             document.getElementById("form").remove();
             i = document.getElementById("myWraper");
             i.innerHTML+="<div id='secondWrap'>" +
                 "<h1 id='congratulation'>"+Congrats+"</h1>" +
-                "<p id='scoreAdjustment'>You got "+scorAdjustment+"</p>" +
+                "<p id='scoreAdjustment'>You got "+scorIncrem+"</p>" +
                 "<input type='button' value='Continue' onclick='getQuestion("+JSON.stringify(sessionID)+")'>" +
                 "</div>";
         });
