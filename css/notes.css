@@ -1,14 +1,10 @@
-.sticky-header h1{
-    font-size: 1rem;
-}
-
 main {
     max-width: 900px;
     margin: 5rem auto 1rem;
     padding: 20px;
-    background: white;
+    background: var(--white);
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .list {
@@ -102,6 +98,14 @@ h2.date {
     color: var(--primary-hover);
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--light-gray);
+}
+
+
+
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column;
@@ -115,23 +119,8 @@ h2.date {
         border-radius: 50%;
         margin: 0 auto 10px;
     }
-}
-
-
-
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--light-gray);
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: var(--footer);
-    font-size: 14px;
-    margin-top: 30px;
-}
-footer p{
-    color: var(--white);
+    main{
+        margin-top: 4rem;
+        background: var(--bg-color);
+    }
 }

@@ -5,64 +5,76 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/base.css">
 </head>
-<header>
-    <div class="logo-container">
-        <img src="/assets/logos/treasure.png" alt="logo" class="logo"></div>
-    <div>
-        <h1 class="TreasureHunt">
-
-            Treasure Hunt</h1>
-    </div>
-
-
-
-
-    <div class="hamburger" onclick="toggleMenu()">
-        &#9776;
-    </div>
-    <nav id="navMenu" class="navMenu">
-        <ul class="myNav">
-            <li class="navList"><a href="index.html">Main</a> </li>
-            <li class="navList"><a href="notes.html">Notes</a> </li>
-            <li class="navList"><a href="treasureHuntsListTesting.html">Test</a> </li>
-            <!--            <li class="navList"><a href="Loginpage.html">Log in </a> </li>-->
-        </ul>
-    </nav>
-</header>
-
-<script src="/js/burger.js"> </script>
 <body>
-<div class="container">
-    <h1>This is a "Treasure-Hunt" Project for the module CO1111.</h1>
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="btn">
+                    <img src="assets/logos/treasure.svg" alt="TeamD Logo">
+                </a>
+            </div>
+            <h1>Treasure Hunt</h1>
+        
+            <!-- Burger Menu for Mobile -->
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="notes.html" class="btn">Notes</a>
+                <a href="test.html" class="btn">Test</a>
+            </nav>
+        </div>
+    </header>
 
-    <p class="italic">
-        We have created a Treasure hunt web application! You will take part in a quiz and we hope you spend your time very funny
-    </p>
-    <h2>Our team consists of:</h2>
-    <ul class="team-list">
-        Tim
-        Devid Brodsky
-        Shumaila
-        Festus
-    </ul>
+    <main>
+        <div class="container">
+            <h2>Treasure-Hunt Project for the module CO1111.</h2>
+    
+            <p>
+                Embark on a thrilling Treasure Hunt like no other! Solve captivating 
+                puzzles, decode secret messages, and uncover hidden riches as you 
+                navigate this exciting web-based quest. Sharpen your wits and prepare 
+                to be amazed at every turn. Adventure awaits—are you ready to claim 
+                your prize?
+            </p>
+            
+            <h2>Our team consists of:</h2>
+            <ul class="team-list">
+                Tim
+                Devid Brodsky
+                Shumaila
+                Festus
+            </ul>
+    
+            <a href="app.html" class="start-btn">Start Quiz</a>
+        </div>
+    </main>
 
-    <button class="start-btn">Start Quiz</button>
-</div>
+    
 <footer>
-<div class="footer-img">
-    <a href="https://www.youtube.com/" target="_blank">
-        <img src="assets/logos/Youtube.png" alt="YouTube">
-    </a>
-    <a href="https://x.com/UclanTeamD" target="_blank">
-        <img src="/assets/logos/x.png" alt="Twitter">
-    </a>
-    <a href="https://www.instagram.com/" target="_blank">
-        <img src="/assets/logos/instagram.png" alt="Instagram">
-    </a>
-    <a href="https://discord.com/" target="_blank">
-        <img src="/assets/logos/discord.png" alt="Discord">
-    </a>
-</div>
-
+    <div class="footer-content">
+        <div class="footer-img">
+            <a href="https://www.facebooh.com/" target="_blank">
+                <img src="assets/logos/facebook-logo.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="assets/logos/instagram-logo.svg" alt="Instagram">
+            </a>
+            <a href="https://x.com/UclanTeamD" target="_blank">
+                <img src="assets/logos/x-logo.svg" alt="Twitter">
+            </a>
+            <a href="https://discord.com/" target="_blank">
+                <img src="assets/logos/discord-logo.svg" alt="Discord">
+            </a>
+        </div>
+        
+            <p>&copy; 2025 Development Team D. All Rights Reserved.</p>
+    </div>
 </footer>
+<script src="js/main.js"></script>
 </body>
+</html>

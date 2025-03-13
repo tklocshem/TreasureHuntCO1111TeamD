@@ -37,6 +37,10 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.sticky-header h1{
+    font-size: 1rem;
+}
+
 .header-container {
     max-width: 1200px;
     margin: 0 1rem auto auto;
@@ -84,10 +88,10 @@ body {
 /* Responsive Navigation */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none !important;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Adjust this to avoid overlap with header */
+        top: 70px;
         left: 0;
         width: 100%;
         background: white;
@@ -100,7 +104,7 @@ body {
     }
 
     .nav-links.active, .burger-menu{
-        display: flex;
+        display: flex !important;
     }
 }
 
@@ -116,4 +120,36 @@ body {
 }
 
 
+footer {
+    background-color: var(--footer);
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+footer img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+footer img:hover {
+    transform: scale(1.1);
+}
+.footer-img{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 1rem;
+    color: var(--white);
+}
+footer a{
+    text-decoration: none;
+}
