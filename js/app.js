@@ -1,3 +1,5 @@
+/<< TO ADD NICK&EMAIL >>
+
 function getinfo(id) {
     const playerNameField = document.getElementById("fname");
     if(playerNameField.value != "") {
@@ -107,6 +109,7 @@ function getQuestion(sessionID){
             }
         });
 }
+
 function getAnswer(sessionID, QType){
     console.log(sessionID);
     if(QType == "NUMERIC" || QType == "INTEGER" || QType == "TEXT") {
@@ -159,15 +162,42 @@ function getScore(sessionID){
         .then(jsonObject => {
             var Congrats = jsonObject.player;
             var scorAdjustment = jsonObject.score;
-            i = document.getElementById("myWraper");
+            i = document.getElementById("myWrapper");
             i+="<div id='secondWrap'>" +
                 "<h1 id='congratulation'>"+Congrats+"</h1>" +
-                "<p id='scoreAdjustment'>You got +"+scorAdjustment+"</p>" +
+                "<p id='scoreAdjustment'>You got +"+scoreAdjustment+"</p>" +
                 "<input type='button' value='Continue' onclick='getQuestion("+sessionID+")'>" +
                 "</div>";
         });
 }
+function setCookie(cookieName, cookieValue, expireDays) {
+    let date = new Date();
+    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let cookiesArray = document.cookie.split(";");
+    for (let i = 0; i < cookiesArray.length; i++) {
+        let cookie = cookiesArray[i].trim();
+        if (cookie.indexOf(nameEQ) == 0) {
+            return cookie.substring(nameEQ.length);
+        }
+    }
+    return null;
+}
 
+// Check if user is already logged in
+document.addEventListener("DOMContentLoaded", () => {
+    const savedUsername = getCookie("Username");
+    const savedEmail = getCookie("Email");
+
+    if (savedUsername && savedEmail) {
+        // Auto-login if cookies exist
+        window.location.href = "/game";
+    }
+});
 function getLeaderBoard(sessionID) {
     var URL = "https://codecyprus.org/th/api/leaderboard?session=" + sessionID + "&sorted";
     fetch(URL)
@@ -175,20 +205,20 @@ function getLeaderBoard(sessionID) {
         .then(jsonObject => {
             var players = jsonObject.leaderboard;
             document.getElementById("end").remove();
-            i = document.getElementById("myWraper");
+            i = document.getElementById("myWrapper");
             i.innerHTML+="<div id='secondWrap'>" +
-                "<h1>Your position in leaderboard is: "+findMinePosition(jsonObject, getCookie("playerName"))+"</h1>";
+                "<h1>Your position in leaderboard is: "+findMy(jsonObject, getCookie("playerName"))+"</h1>";
             let k = document.getElementById("secondWrap");
-            for(let j = 0; j < 10; j++){
-                k.innerHTML+= "<h2>Player № "+(j+1)+" "+jsonObject.leaderboard[j].player+" and his score is: "+jsonObject.leaderboard[j].score+"</h2>";
+            for( var k = 0; k < 8; k++){
+                k.innerHTML+= "<h2>Player № "+(i+1)+" "+jsonObject.leaderboard[j].player+" and his score is: "+jsonObject.leaderboard[j].score+"</h2>";
             }
 
             i.innerHTML+="<input type='button' onclick='startAgain()' value='Start Again!'>" +
                 "</div>";
         });
 }
-function findMinePosition(jsonObject, playerName){
-    for(let i = 0; i < jsonObject.numOfPlayers;i++)
+function findMy(jsonObject, playerName){
+    for(var i = 0; i < jsonObject.numOfPlayers;i++)
     {
         if(JSON.stringify(jsonObject.leaderboard[i].player) === JSON.stringify(playerName))
         {
@@ -199,28 +229,42 @@ function findMinePosition(jsonObject, playerName){
 }
 function startAgain()
 {
-    location.replace("https://pgurulev.github.io/CO1111/Project/");
+    location.replace("https://pgurulev.github.io/TreasureHuntCO1111TeamD/");
 }
 //Code from w3shools url="https://www.w3schools.com/js/js_cookies.asp"
 function getCookie(cname) {
+    // 'cname' is the name of the cookie we want to retrieve
     let name = cname + "=";
+    // Append "=" to the cookie name to match the format in document.cookie (e.g., "username=")
+
     let decodedCookie = decodeURIComponent(document.cookie);
+    // Get all cookies from the browser as a single string and decode any URI-encoded characters
+    // (e.g., converts "%20" back to a space)
+
     let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
+    // Split the cookie string into an array of individual cookie entries
+    // document.cookie looks like "name1=value1; name2=value2", so splitting by ";" gives ["name1=value1", " name2=value2"]
+
+    for (let i = 0; i < ca.length; i++) {
+        // Loop through each cookie entry in the array
         let c = ca[i];
+        // Get the current cookie string (e.g., "name1=value1" or " name2=value2")
+
         while (c.charAt(0) == ' ') {
+            // Check if the first character is a space (some cookie entries may have leading spaces)
             c = c.substring(1);
+            // Trim the leading space by taking the substring starting from the second character
         }
+
         if (c.indexOf(name) == 0) {
+            // Check if this cookie starts with our target "name="
+            // indexOf returns 0 if "name=" is at the start of the string
             return c.substring(name.length, c.length);
+            // Extract and return just the value by removing the "name=" part
+            // (e.g., if c is "username=johndoe", return "johndoe")
         }
     }
+
     return "";
-}
-//www.w3schools.com/js/js_cookies.asp"
-function setCookie(cookieName, cookieValue, expireDays) {
-    let date = new Date();
-    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + date.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    // If no matching cookie is found after the loop, return an empty string
 }
