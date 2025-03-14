@@ -115,17 +115,16 @@ function getQuestion(sessionID, type) {
                     "</div>"
             }
         });
-}
 
 function getAnswer(sessionID, QType){
     console.log(sessionID);
     if(QType == "NUMERIC" || QType == "INTEGER" || QType == "TEXT") {
-        var ans = document.getElementById("ans").value;
+        var answer = document.getElementById("ans").value;
     }
     else{
-        var ans = document.querySelector('input[name="ans"]:checked').value;
+        var answer = document.querySelector('input[name="ans"]:checked').value;
     }
-    var URL = "https://codecyprus.org/th/api/answer?session="+sessionID+"&answer="+ans;
+    var URL = "https://codecyprus.org/th/api/answer?session="+sessionID+"&answer="+answer;
 
     fetch(URL)
         .then(response => response.json()) //Parse JSON text to JavaScript object
@@ -138,7 +137,7 @@ function getAnswer(sessionID, QType){
             console.log(Congrats);
             i.innerHTML+="<div id='secondWrap'>" +
                 "<h1 id='congratulation'>"+Congrats+"</h1>" +
-                "<p id='scoreAdjustment'>You got +"+scoreIncrem+"</p>" +
+                "<p id='scoreAdjustment'>You got +"+scoreIncrement+"</p>" +
                 "<input type='button' value='Continue' onclick='getQuestion("+JSON.stringify(sessionID)+")'>" +
                 "</div>";
         });
@@ -165,8 +164,7 @@ function getLocation(){
 function getScore(sessionID){
     var URL = "https://codecyprus.org/th/api/score?session="+sessionID;
     fetch(URL)
-        .then(response => response.json()) //Parse JSON text to JavaScript object
-        .then(jsonObject => {
+        .then(response => response.json()).then(jsonObject => {
             var Congrats = jsonObject.player;
             var scorAdjustment = jsonObject.score;
             i = document.getElementById("myWrapper");
@@ -179,7 +177,7 @@ function getScore(sessionID){
 }
 function setCookie(cookieName, cookieValue, expireDays) {
     let date = new Date();
-    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 8));
     let expires = "expires=" + date.toUTCString();
     document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
