@@ -30,7 +30,14 @@ function startHunt(PlayerName,gameid)
             getQuestion(sessionID);
         });
 }
-function getQuestion(sessionID){
+function getQuestion(sessionID, type) {
+    if (QType == "NUMERIC" || QType == "INTEGER" || QType == "TEXT") {
+        var ans = document.getElementById("ans").value;
+    } else {
+        var ans = document.querySelector('input[name="ans"]:checked').value;
+    }
+    var URL = "https://codecyprus.org/th/api/answer?session=" + sessionID + "&answer=" + ans;
+}
     var URL = "https://codecyprus.org/th/api/question?session="+sessionID;
     if(document.getElementById("secondWrap") != null)
     {

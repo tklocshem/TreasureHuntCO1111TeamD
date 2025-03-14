@@ -60,7 +60,7 @@ async function testStartTreasureHuntSuccess() {
 // Function to test getQuestion API
 async function testGetQuestion() {
     try {
-        const question = await getQuestion(sessionId);
+        const question = await getQuestion(sessionId, );
         document.getElementById('questionResult').innerText = "getQuestion: " + JSON.stringify(question, null, 2);
     } catch (error) {
         document.getElementById('questionResult').innerText = "getQuestion Error: " + error.message;
