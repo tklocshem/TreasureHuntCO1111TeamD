@@ -48,7 +48,7 @@ Open test.html to run unit tests and interact with the test API.
 
 3. Folder Structure
 
-📂 TreasureHuntCO1111TeamD
+|   📂 TreasureHuntCO1111TeamD
 ├── 📂 assets/            # Images & logos
 ├── 📂 css/               # Stylesheets (base.css, app.css, test.css)
 ├── 📂 js/                # JavaScript files
@@ -59,58 +59,34 @@ Open test.html to run unit tests and interact with the test API.
 
 📡 API Endpoints Used
 
+
+|   Endpoint       |               Purpose                  |
+|-----------------------------------------------------------|
+|   `/List`        |  Get list of available hunts           |
+|   `/start`       |  Start a new hunt session              |
+|   `/question`    |  Retrieve the next question            |
+|   `/answer`      |  Submit an answer                      |
+|   `/skip`        |  Skip a question (if allowed)          |
+|   `/leaderboard` |  Get current leaderboard               |
+|   `/location`    |  Send geolocation data                 |
+
+
 The app integrates with the Code Cyprus API:
 
 Live Hunts: https://codecyprus.org/th/api/
 
 Test Hunts: https://codecyprus.org/th/test-api/
 
-Key API Endpoints:
-
-Endpoint
-
-Purpose
-
-/list
-
-Get list of available hunts
-
-/start
-
-Start a new hunt session
-
-/question
-
-Retrieve the next question
-
-/answer
-
-Submit an answer
-
-/skip
-
-Skip a question (if allowed)
-
-/leaderboard
-
-Get current leaderboard
-
-/location
-
-Send geolocation data
-
 ## Team Members
 
-Name:                                      Position:            
-Devid Brodsky                              Team Leader & Frontend Assistant
+|          Name                    |                   Position               |
+|-----------------------------------------------------------------------------|
+|  Devid Brodsky                   |     Team Leader & Frontend Assistant|    |
+|  Tymofii Klochko--shemiakin      |     Frontend Developer (Backend Support) |
+|  Festus Chinedu Obiwundu         |     Frontend Developer (Backend Support) |
+|  Shumaila Rasool                 |    Full Stack Assistant & Content Manager|
+|  Philip Diyebkazah Baba          |           QA Tester & Full Stack Support |
 
-Tymofii Klochko--shemiakin                 Backend Developer & GitHub Manager
-
-Festus Chinedu Obiwundu                    Frontend Developer (Backend Support)
-
-Shumaila Rasool                            Full Stack Assistant & Content Manager
-
-Philip Diyebkazah Baba                     QA Tester & Full Stack Support
 
 
 ## Technologies Used
