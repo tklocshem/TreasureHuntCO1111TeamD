@@ -12,7 +12,7 @@ test.html: A Testing Version of the app using the Code Cyprus Test API, along wi
 
 ## Features
 
-|    Features                            | Description                                               ||
+|    Features                            | gitDescription                                            |
 |----------------------------------------|-----------------------------------------------------------|
 |   **Live Hunts**                       | Fetches available treasure hunts from the Code Cyprus API |
 |   **Test Hunts**                       | A separate testing environment to run mock hunts          |
