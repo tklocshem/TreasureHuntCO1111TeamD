@@ -81,20 +81,20 @@ Test Hunts: https://codecyprus.org/th/test-api/
 
 |          Name                    |                   Position               |
 |-----------------------------------------------------------------------------|
-|  Devid Brodsky                   |     Team Leader & Frontend Assistant|    |
-|  Tymofii Klochko--shemiakin      |     Frontend Developer (Backend Support) |
-|  Festus Chinedu Obiwundu         |     Frontend Developer (Backend Support) |
+|  Devid Brodsky                   |    Team Leader & Frontend Assistant|     |
+|  Tymofii Klochko--shemiakin      |    Frontend Developer (Backend Support)  |
+|  Festus Chinedu Obiwundu         |    Frontend Developer (Backend Support)  |
 |  Shumaila Rasool                 |    Full Stack Assistant & Content Manager|
-|  Philip Diyebkazah Baba          |           QA Tester & Full Stack Support |
+|  Philip Diyebkazah Baba          |    QA Tester & Full Stack Support |
 
 
 
 ## Technologies Used
 
-HTML5, CSS3, JavaScript – Core web technologies
+HTML5,CSS3,JavaScript – Core web technologies
 
 Code Cyprus API – Treasure Hunt backend
 
 Geolocation API – To track user location
 
-GitHub – Version control & collaboration
+GitHub – Version control & collaboration
