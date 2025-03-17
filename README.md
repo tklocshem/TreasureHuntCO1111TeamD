@@ -12,16 +12,29 @@ test.html: A Testing Version of the app using the Code Cyprus Test API, along wi
 
 ## Features
 
-|   Live Hunts         |    Fetches available treasure hunts from the Code Cyprus API.
-|   Test Hunts         |    A separate testing environment to run mock hunts.
-|   Answer Submission  |    Users can submit answers for various question types.
-|   Skipping Questions |    If permitted, users can skip questions.
-|   Score Tracking     |    Live updates of scores after each question.
-|   Leaderboard        |    Displays rankings of players in the current hunt.
-|   Geolocation        |    Sends location data with answers where required.
-|   Mobile-Friendly UI |    Designed primarily for mid-to-high-end smartphones.gi
-|   Unit Testing & User|    A dedicated test.html page for testing methodologies.
-|    Acceptance Test  
+|    Features              |          Description                                             |
+
+|--------------------------|------------------------------------------------------------------| 
+
+|   **Live Hunts**         |    Fetches available treasure hunts from the Code Cyprus API     |
+
+|   **Test Hunts**         |    A separate testing environment to run mock hunts              |
+
+|   **Answer Submission**  |    Users can submit answers for various question types           |
+
+|   **Skipping Questions** |    If permitted, users can skip questions                        |
+
+|   **Score Tracking**     |    Live updates of scores after each question                    |
+
+|   **Leaderboard**        |    Displays rankings of players in the current hunt              |
+
+|   **Geolocation**        |    Sends location data with answers where required               |
+
+|   **Mobile-Friendly UI** |    Designed primarily for mid-to-high-end smartphones.gi         |
+
+|   **Unit Testing & User  |    A dedicated test.html page for testing methodologies          |
+     Acceptance Test**      
+     
 
 ## Getting Started
 
