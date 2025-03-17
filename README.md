@@ -60,15 +60,15 @@ Open test.html to run unit tests and interact with the test API.
 📡 API Endpoints Used
 
 
-|   Endpoint       |               Purpose                  |
-|-----------------------------------------------------------|
-|   `/List`        |  Get list of available hunts           |
-|   `/start`       |  Start a new hunt session              |
-|   `/question`    |  Retrieve the next question            |
-|   `/answer`      |  Submit an answer                      |
-|   `/skip`        |  Skip a question (if allowed)          |
-|   `/leaderboard` |  Get current leaderboard               |
-|   `/location`    |  Send geolocation data                 |
+|   Endpoint       | Purpose                                 |
+|------------------|-----------------------------------------|
+|   `/List`        | Get list of available hunts             |
+|   `/start`       | Start a new hunt session                |
+|   `/question`    | Retrieve the next question              |
+|   `/answer`      | Submit an answer                        |
+|   `/skip`        | Skip a question (if allowed)            |
+|   `/leaderboard` | Get current leaderboard                 |
+|   `/location`    | Send geolocation data                   |
 
 
 The app integrates with the Code Cyprus API:
@@ -79,13 +79,13 @@ Test Hunts: https://codecyprus.org/th/test-api/
 
 ## Team Members
 
-|          Name                    |                   Position               |
-|-----------------------------------------------------------------------------|
-|  Devid Brodsky                   |    Team Leader & Frontend Assistant|     |
-|  Tymofii Klochko--shemiakin      |    Frontend Developer (Backend Support)  |
-|  Festus Chinedu Obiwundu         |    Frontend Developer (Backend Support)  |
-|  Shumaila Rasool                 |    Full Stack Assistant & Content Manager|
-|  Philip Diyebkazah Baba          |    QA Tester & Full Stack Support |
+|          Name                    | Position                                  |
+|----------------------------------|-------------------------------------------|
+|  Devid Brodsky                   | Team Leader & Frontend Assistant          |     A
+|  Tymofii Klochko--shemiakin      | Frontend Developer (Backend Support)      |
+|  Festus Chinedu Obiwundu         | Frontend Developer (Backend Support)      |
+|  Shumaila Rasool                 | Full Stack Assistant & Content Manager    |
+|  Philip Diyebkazah Baba          | QA Tester & Full Stack Support            |
 
 
 
