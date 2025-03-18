@@ -12,17 +12,17 @@ test.html: A Testing Version of the app using the Code Cyprus Test API, along wi
 
 ## Features
 
-|    Features                            | gitDescription                                            |
-|----------------------------------------|-----------------------------------------------------------|
-|   **Live Hunts**                       | Fetches available treasure hunts from the Code Cyprus API |
-|   **Test Hunts**                       | A separate testing environment to run mock hunts          |
-|   **Answer Submission**                | Users can submit answers for various question types       |
-|   **Skipping Questions**               | If permitted, users can skip questions                    |
-|   **Score Tracking**                   | Live updates of scores after each question                |
-|   **Leaderboard**                      | Displays rankings of players in the current hunt          |
-|   **Geolocation**                      | Sends location data with answers where required           |
-|   **Mobile-Friendly UI**               | Designed primarily for mid-to-high-end smartphones.gi     |
-|**Unit Testing & User Acceptance Test** | A dedicated test.html page for testing methodologies      |
+| Features                                   | Description                                               |
+|--------------------------------------------|-----------------------------------------------------------|
+| `/**Live Hunts**`                          | Fetches available treasure hunts from the Code Cyprus API |
+| `/**Test Hunts**`                          | A separate testing environment to run mock hunts          |
+| `/**Answer Submission**`                   | Users can submit answers for various question types       |
+| `/**Skipping Questions**`                  | If permitted, users can skip questions                    |
+| `/**Score Tracking**`                      | Live updates of scores after each question                |
+| `/**Leaderboard**`                         | Displays rankings of players in the current hunt          |
+| `/**Geolocation**`                         | Sends location data with answers where required           |
+| `/**Mobile-Friendly UI**`                  | Designed primarily for mid-to-high-end smartphones.gi     |
+| `/**Unit Testing & User Acceptance Test**` | A dedicated test.html page for testing methodologies      |
      
 
 ## Getting Started
@@ -84,7 +84,7 @@ Test Hunts: https://codecyprus.org/th/test-api/
 
 |          Name                    | Position                                  |
 |----------------------------------|-------------------------------------------|
-|  Devid Brodsky                   | Team Leader & Frontend Assistant          |     A
+|  Devid Brodsky                   | Team Leader & Frontend Assistant          |     
 |  Tymofii Klochko--shemiakin      | Frontend Developer (Backend Support)      |
 |  Festus Chinedu Obiwundu         | Frontend Developer (Backend Support)      |
 |  Shumaila Rasool                 | Full Stack Assistant & Content Manager    |
