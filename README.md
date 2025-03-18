@@ -1,6 +1,6 @@
-## Treasure Hunt Web App - Team D
+### Treasure Hunt Web App - Team D
 
-## Overview
+### Overview
 
 This project is a Mobile Web App designed for playing a Treasure Hunt using the Code Cyprus API. The app allows users to participate in a treasure hunt by answering questions and tracking their progress using location services.
 
@@ -10,7 +10,7 @@ app.html: The Live Treasure Hunt App using the official Code Cyprus API.
 
 test.html: A Testing Version of the app using the Code Cyprus Test API, along with unit tests and user acceptance test plans.
 
-## Features
+### Features
 
 | Features                                   | Description                                               |
 |--------------------------------------------|-----------------------------------------------------------|
@@ -25,9 +25,9 @@ test.html: A Testing Version of the app using the Code Cyprus Test API, along wi
 | `/**Unit Testing & User Acceptance Test**` | A dedicated test.html page for testing methodologies      |
      
 
-## Getting Started
+### Getting Started
 
-1.  Installation
+### 1.  Installation
 
 Clone the repository:
 
@@ -43,19 +43,35 @@ Open app.html to start a Live Treasure Hunt.
 
 Open test.html to run the Test Hunt and execute unit tests.
 
-2. Running the App
+### 2. Running the App
 
 Open app.html in a modern web browser to start playing a real hunt.
 
 Open test.html to run unit tests and interact with the test API.
 
-3.  ### Folder Structure
+### 3.   Folder Structure
 
 ### TreasureHuntCO1111TeamD
 
 
-📂 TreasureHuntCO1111TeamD/
-├── 📂 assets/            # Images & logos
+| 📂 TreasureHuntCO1111TeamD/ |                                        |
+|-----------------------------|----------------------------------------|
+| 📂 assets/                  | # Images & logos                       |
+| 📂 css/                     | # Stylesheets                          |
+| ────base.css                |                                        |
+| ────app.css                 |                                        |
+| ────test.css                |                                        |
+| 📂 js/                      | # JavaScript files                     |
+| index.html                  | # Landing page (marketing & team info) |
+| app.html                    | # Main treasure hunt app (LIVE API)    |
+| test.html                   | # Test environment & unit tests        |
+| README.md                   | # Documentation (this file)            |
+
+|
+
+
+
+├📂 assets/            # Images & logos
 |
 ├── 📂 css/               # Stylesheets
 |      |────base.css
@@ -72,7 +88,7 @@ Open test.html to run unit tests and interact with the test API.
 ├── README.md             # Documentation (this file)
 ```
 
-📡 API Endpoints Used
+### 4. API Endpoints Used
 
 
 |   Endpoint       | Purpose                                 |
@@ -92,7 +108,7 @@ Live Hunts: https://codecyprus.org/th/api/
 
 Test Hunts: https://codecyprus.org/th/test-api/
 
-## Team Members
+### 5. Team Members
 
 |          Name                    | Position                                  |
 |----------------------------------|-------------------------------------------|
@@ -104,7 +120,7 @@ Test Hunts: https://codecyprus.org/th/test-api/
 
 
 
-## Technologies Used
+### Technologies Used
 
 HTML5,CSS3,JavaScript – Core web technologies
 
