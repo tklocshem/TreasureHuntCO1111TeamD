@@ -54,39 +54,19 @@ Open test.html to run unit tests and interact with the test API.
 ### TreasureHuntCO1111TeamD
 
 
-| 📂 TreasureHuntCO1111TeamD/ |                                        |
-|-----------------------------|----------------------------------------|
-| 📂 assets/                  | # Images & logos                       |
-| 📂 css/                     | # Stylesheets                          |
-| ────base.css                |                                        |
-| ────app.css                 |                                        |
-| ────test.css                |                                        |
-| 📂 js/                      | # JavaScript files                     |
-| index.html                  | # Landing page (marketing & team info) |
-| app.html                    | # Main treasure hunt app (LIVE API)    |
-| test.html                   | # Test environment & unit tests        |
-| README.md                   | # Documentation (this file)            |
+| 📂 TreasureHuntCO1111TeamD/ |                                      |
+|-----------------------------|--------------------------------------|
+| 📂 assets/                  | Images & logos                       |
+| 📂 css/                     | Stylesheets                          |
+| ──base.css                  |                                      |
+| ──app.css                   |                                      |
+| ──test.css                  |                                      |
+| 📂 js/                      | JavaScript files                     |
+| index.html                  | Landing page (marketing & team info) |
+| app.html                    | Main treasure hunt app (LIVE API)    |
+| test.html                   | Test environment & unit tests        |
+| README.md                   | Documentation (this file)            |
 
-|
-
-
-
-├📂 assets/            # Images & logos
-|
-├── 📂 css/               # Stylesheets
-|      |────base.css
-|      |────app.css
-|      |────test.css
-|
-├── 📂 js/                # JavaScript files
-|
-├── index.html            # Landing page (marketing & team info)
-├── app.html              # Main treasure hunt app (LIVE API)
-|
-├── test.html             # Test environment & unit tests
-|
-├── README.md             # Documentation (this file)
-```
 
 ### 4. API Endpoints Used
 
