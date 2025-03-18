@@ -49,16 +49,28 @@ Open app.html in a modern web browser to start playing a real hunt.
 
 Open test.html to run unit tests and interact with the test API.
 
-3. Folder Structure
+3.  ### Folder Structure
 
-|   📂 TreasureHuntCO1111TeamD
+### TreasureHuntCO1111TeamD
+
+
+📂 TreasureHuntCO1111TeamD/
 ├── 📂 assets/            # Images & logos
-├── 📂 css/               # Stylesheets (base.css, app.css, test.css)
+|
+├── 📂 css/               # Stylesheets
+|      |────base.css
+|      |────app.css
+|      |────test.css
+|
 ├── 📂 js/                # JavaScript files
+|
 ├── index.html            # Landing page (marketing & team info)
 ├── app.html              # Main treasure hunt app (LIVE API)
+|
 ├── test.html             # Test environment & unit tests
+|
 ├── README.md             # Documentation (this file)
+```
 
 📡 API Endpoints Used
 
