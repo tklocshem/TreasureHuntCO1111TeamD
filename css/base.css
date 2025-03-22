@@ -24,6 +24,7 @@ body {
     background-color: #f8f9fa;
     color: var(--gray);
 }
+/* Sticky Header */
 
 .sticky-header {
     text-align: center;
@@ -53,6 +54,7 @@ body {
     height: auto;
     margin-right: 1rem;
 }
+/* Navigation Links */
 .nav-links {
     display: flex;
     align-items: center;
@@ -126,7 +128,7 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-
+/* Footer */
 footer {
     background-color: var(--footer);
     padding: 15px;
@@ -160,6 +162,7 @@ footer p{
 footer a{
     text-decoration: none;
 }
+/* Section Styles */
 section{
     padding: 40px 20px;
     text-align: center;
