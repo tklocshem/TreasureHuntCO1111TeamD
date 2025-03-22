@@ -104,6 +104,7 @@ Test Hunts: https://codecyprus.org/th/test-api/
 
 HTML5,CSS3,JavaScript – Core web technologies
 
+
 Code Cyprus API – Treasure Hunt backend
 
 Geolocation API – To track user location
