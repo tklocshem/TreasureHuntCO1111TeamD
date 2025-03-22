@@ -15,12 +15,12 @@
 /* For general styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Inter, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f8f9fa;
     color: var(--gray);
 }
@@ -109,7 +109,8 @@ body {
     }
 
 
-    .nav-links.active, .burger-menu{
+    .nav-links.active,
+    .burger-menu{
         display: flex !important;
     }
 }
@@ -158,4 +159,32 @@ footer p{
 }
 footer a{
     text-decoration: none;
+}
+section{
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--white);
+    margin: 80px auto 20px;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+section h1{
+    color: var(--primary);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+section p{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray);
+}
+section a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+section a:hover {
+    text-decoration: underline;
 }
