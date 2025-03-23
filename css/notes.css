@@ -1,10 +1,12 @@
 main {
     max-width: 900px;
+    width: 90%;
     margin: 5rem auto 8rem;
     padding: 20px;
     background: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
 .list {
@@ -23,6 +25,8 @@ main {
 
 .list li:hover {
     transform: scale(1.01);
+    background: rgba(13,144,253, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 h2.date {
@@ -46,6 +50,7 @@ h2.date {
 
 .profile-card:hover {
     transform: scale(1.02);
+    box-shadow: 0 5px rgba(0, 0, 0,0.15);
 }
 
 /* Team Leader Highlight */
@@ -122,5 +127,30 @@ p {
     main{
         margin-top: 4rem;
         background: var(--bg-color);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    main {
+        background: #1a1a1a;
+        color: white;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+    .profile-card {
+        list li {
+            background: #252525;
+            color: white;
+            box-shadow: 0 3px 8px rgba(255, 255, 255, 0.3);
+        }
+        .profile-card:hover {
+            box-shadow: 0 3px 8px rgba(255, 255, 255, 0.5);
+        }
+        .name{
+            color: #4da3ff
+        }
+        .email a {
+            color: #4da3ff;
+        }
+
+
     }
 }
