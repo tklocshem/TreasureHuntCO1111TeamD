@@ -1,3 +1,12 @@
+/* Define variables  (add any color you prefer) */
+:root {
+    --bg-color: #f8f9fa;  /* Light background */
+    --primary: #0d72fd;   /*  Primary color */
+    --primary-hover: #0c68e8; /* primary color hover */
+    --white: #fff;        /* white color */
+    --dark-gray: #333;    /* Dark text color */
+}
+
 /* general Styles */
 body {
     background-color: var(--bg-color);
@@ -15,7 +24,6 @@ body {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
 }
 
 .container h2 {
@@ -24,10 +32,7 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 /* Input box */
 .input-box label {
     font-weight: bold;
@@ -70,7 +75,7 @@ button:hover {
     transform: translateY(-2px);
 }
 button:active{
-    transform: scale(1.05);
+    transform: scale(0.98);
 }
 /* Links */
 .link a {
@@ -90,35 +95,5 @@ button:active{
     .container {
         width: 90%;
         margin: 5rem 1rem 1rem;
-    }
-}
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-    body{
-        background: #121212;
-        color: white;
-    }
-    .container {
-        background: #1e1e1e;
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
-    }
-    button{
-        background: #1976d2;
-        color: white;
-    }
-    button:hover {
-        background: #1455aa;
-    }
-    .input-box input {
-        background: #2a2a2a;
-        color: white;
-        border: 1px solid #444;
-    }
-    .input-box input:focus {
-        border-color: #4da3ff;
-        box-shadow: 0 4px 8px rgba(77, 163, 255, 0.1);
-    }
-    .link a {
-        color: #4da3ff
     }
 }
