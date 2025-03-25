@@ -10,7 +10,6 @@
     --footer: #343a40;
     --light-green: #8DD7BF;
 }
-
 /* For general styles */
 {
     box-sizing: border-box;
@@ -23,8 +22,8 @@ body {
     background-color: #f8f9fa;
     color: var(--gray);
 }
-/* Sticky Header */
 
+/* Sticky Header */
 .sticky-header {
     display: flex;
     text-align: center;
@@ -92,7 +91,6 @@ body {
     .burger-menu{
         display: flex;
     }
-
     .nav-links {
         display: none !important;
         flex-direction: column;
