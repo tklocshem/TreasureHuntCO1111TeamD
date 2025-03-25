@@ -1,5 +1,5 @@
 /* define light colors */
-root{
+:root{
     --dark-gray: #333;
     --light-gray: #f5f5f5;
 }
