@@ -2,7 +2,7 @@
 :root{
     --primary: #0d72fd;
     --primary-hover: #0c68e8;
-    --secondary: ;
+    --secondary: #333;
     --bg-color: #f8f9fa;
     --white: #fff;
     --gray: #333;
@@ -11,9 +11,8 @@
     --light-green: #8DD7BF;
 }
 
-
 /* For general styles */
-* {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -27,6 +26,7 @@ body {
 /* Sticky Header */
 
 .sticky-header {
+    display: flex;
     text-align: center;
     position: fixed;
     top: 0;
@@ -72,23 +72,27 @@ body {
 }
 
 /* Burger Menu Styles */
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
 
 .burger-menu span {
     width: 25px;
     height: 3px;
     background: var(--primary);
     margin: 3px 0;
-
+    transition: tarnsform 0.3s ease;
 
 }
-
 /* Responsive Navigation */
-@media (max-width: 768px) {
+@media (max-width:780px){
+    .burger-menu{
+        display: flex;
+    }
+
     .nav-links {
         display: none !important;
         flex-direction: column;
@@ -99,21 +103,18 @@ body {
         background: white;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
+        transition: 0.3s ease;
     }
-{
-
-}
 
     .nav-links a{
         margin-left: 0;
 
-
     }
-
-
     .nav-links.active,
     .burger-menu{
         display: flex !important;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -158,6 +159,8 @@ footer img:hover {
 footer p{
     font-size: 0.8rem;
     color: var(--white);
+    text-align: center;
+    width: 100%;
 }
 footer a{
     text-decoration: none;
