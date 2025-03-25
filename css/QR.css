@@ -1,3 +1,14 @@
+:root {
+        --bg-color: #f8f9fa;  /* Light background */
+        --primary: #0d72fd;   /*  Primary color */
+        --primary-hover: #0c68e8; /* primary color hover */
+        --white: #fff;        /* white color */
+        --dark-gray: #333;    /* Dark text color */
+        --gray: #2e2e2e;
+        --qr-border: rgba(255, 255, 255, 0.3);
+        --qr-glow: rgba(85, 188, 252, 0.5);
+        --qr-glow-intense: rgba(85, 188, 252, 0.8);
+}
 main {
     display: flex;
     flex-direction: column;
@@ -5,6 +16,8 @@ main {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
 }
 
 button {
@@ -16,11 +29,12 @@ button {
     cursor: pointer;
     transition: background 0.3s;
     background: var(--primary);
-    color: white;
+    color: var(--white);
 }
 
 button:hover {
     background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
 #preview {
@@ -34,7 +48,7 @@ button:hover {
 
 #content {
     background: var(--gray);
-    color: white;
+    color: var(--white);
     padding: 15px;
     border-radius: 5px;
     width: 80%;
@@ -44,21 +58,20 @@ button:hover {
 .QR-frame{
     position: relative;
     padding: 20px;
-    border: 5px solid rgba(255,255,255,0.3);
+    border: 5px solid var(--qr-border);
     border-radius: 12px;
-    box-shadow: 0 0 15px  rgba(85, 188, 252, 0.7);
+    box-shadow: 0 0 15px var(--qr-glow);
     animation: glow 1.5s infinite alternate;
 }
 /*glowing animation*/
 @keyframes glow {
     from{
-        box-shadow: 0 0 10px  rgba(85, 188, 252, 0.5);
+        box-shadow: 0 0 10px var(--qr-glow);
     }
     to  {
-        box-shadow: 0 0 10px  rgba(85, 188, 252, 1);
+        box-shadow: 0 0 10px var(--qr-glow-intense);
     }
 }
-
 /* in case you want to make your devices in dark mode */
 
 @media (max-width: 800px) {
@@ -74,12 +87,19 @@ button:hover {
 /* Dark mode support*/
 
 @media (max-width: 500px) {
+    :root{
+        --bg-color: #121212;
+        --gray: #1e1e1e;
+        --qr-border: rgba(255, 255, 255, 0.2);
+        --qr-glow: rgba(85, 188, 252, 0.5);
+        --qr-glow-intense: rgba(85, 188, 252, 0.8);
+    }
     main{
-        background: #121212
+        background: var(--bg-color);
     }
     #content {
-        background: #1e1e1e;
-        color: #fff;
+        background: var(--gray);
+        color: var(--white);
     }
     button {
         background: #1976d2;
