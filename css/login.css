@@ -13,15 +13,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 1rem; /* Added for mobile spacing */
 }
-/* Login Contains */
+
+/* Login Container */
 .container {
     max-width: 400px;
-    margin: 5rem auto 1rem;
+    width: 100%; /* Added for better responsiveness */
+    margin: 0; /* Changed from 5rem auto 1rem */
     background: var(--white);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +33,7 @@ body {
     text-align: center;
     color: var(--primary);
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem; /* Slightly reduced */
 }
 
 /* Input box */
@@ -38,7 +41,7 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem; /* Adjusted for better spacing */
 }
 
 .input-box input {
@@ -46,20 +49,22 @@ body {
     width: 100%;
     color: #333;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem; /* Consistent spacing */
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
     transition: border 0.2s;
 }
+
 .input-box input:focus {
     border-color: #4da3ff;
     box-shadow: 0 4px 8px rgba(77, 163, 255, 0.1);
 }
+
 /* Button */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Slightly increased */
     border: none;
     background: var(--primary);
     color: white;
@@ -68,32 +73,47 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 0.5rem; /* Added spacing */
 }
 
 button:hover {
     background: var(--primary-hover);
     transform: translateY(-2px);
 }
-button:active{
+
+button:active {
     transform: scale(0.98);
 }
+
 /* Links */
+.link {
+    text-align: center;
+    margin-top: 1.5rem; /* Increased spacing */
+}
+
 .link a {
     font-size: 0.9rem;
     color: #1967d2;
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
+    display: block; /* Changed to block for better spacing */
+    margin: 0.5rem 0; /* Vertical spacing between links */
 }
+
 .link a:hover {
     text-decoration: underline;
     color: #1455aa;
 }
+
 /* Responsive for mobile */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
-        margin: 5rem 1rem 1rem;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    body {
+        padding: 1rem;
+        align-items: flex-start; /* Prevent vertical overflow */
     }
 }
