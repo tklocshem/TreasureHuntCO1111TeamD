@@ -1,6 +1,6 @@
 .container{
-    max-width: 800px;
-    margin: 5.50rem auto 8rem;
+    max-width: 1000px;
+    margin: 6rem auto 8rem;
 }
 .title {
     text-align: center;
@@ -103,6 +103,6 @@
         padding: 10px;
     }
     .container{
-        margin: 0 1rem;
+        margin: 6rem 1rem 7rem;
     }
 }

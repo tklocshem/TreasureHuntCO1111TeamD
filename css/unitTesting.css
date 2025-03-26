@@ -1,6 +1,6 @@
 .container {
     max-width: 1000px;
-    margin: 6rem auto;
+    margin: 6rem auto 8rem;
 }
 
 .headers {
@@ -49,4 +49,8 @@
     border-radius: 8px;
     margin-top: 20px;
 }
-
+@media (max-width: 768px) {
+    .container {
+      margin: 6rem 1rem;
+    }
+  }
