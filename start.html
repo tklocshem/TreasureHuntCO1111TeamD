@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Treasure Hunt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
-        }
-        p {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treasure Hunt Register</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/start.css" />
 </head>
 <body>
-<h1>Start Treasure Hunt</h1>
-<p id="uuidDisplay">The UUID is: </p>
+<header class="sticky-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html" class="btn">
+        <img src="assets/logos/treasure.png" alt="TeamD Logo" />
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="register-box">
+    <h2>Start Your Adventure</h2>
+    <form id="playerForm">
+      <div class="input-box">
+        <label for="fname">Player Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter Your Name" required />
+      </div>
+      <div class="input-box">
+        <label for="huntSelect">Select a Treasure Hunt:</label>
+        <select id="huntSelect"></select>
+      </div>
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
+</main>
 
 <script>
-    // Get the query string from the URL
-    const queryString = window.location.search;
+    // create cookie with a given name value and expiration
+function setCookie(name, value, days = 1) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()};path=/`;
+}
+// Fetch treasure hunt data
+async function fetchList(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+     // Only return hunts if the status is OK
+    return data.status === "OK" ? data.treasureHunts : [];
+  } catch (err) {
+    console.error("Error fetching hunts:", err);
+    return []; //and return empyt list if error
+  }
+}
 
-    // Parse the query string to extract the UUID
-    const urlParams = new URLSearchParams(queryString);
-    const uuid = urlParams.get('uuid');
+//fetch all hunts from the CodeCyprus API
+async function fetchHunts() {
+  return await fetchList("https://codecyprus.org/th/api/list");
+}
 
-    // Display the UUID on the page
-    const uuidDisplay = document.getElementById('uuidDisplay');
-    uuidDisplay.textContent += uuid;
+document.addEventListener("DOMContentLoaded", async () => {
+  const huntSelect = document.getElementById("huntSelect");
+  const hunts = await fetchHunts();
+// If no hunts alert  player and disable  button
+  if (hunts.length === 0) {
+    alert("No available Treasure Hunts found.");
+    document.querySelector("button[type='submit']").disabled = true;
+    return;
+  }
+//populate options with the list of hunts
+  hunts.forEach(hunt => {
+    const opt = document.createElement("option");
+    opt.value = hunt.uuid; // Use UUID to identify the hunt
+    opt.textContent = hunt.name || "Untitled Hunt";
+    huntSelect.appendChild(opt);
+  });
+
+  document.getElementById("playerForm").addEventListener("submit", function (e) {
+    e.preventDefault();  // for page not to reload
+    const playerName = document.getElementById("fname").value.trim();
+    const selectedHuntId = huntSelect.value;
+
+// Check if both fields are filled
+    if (!playerName || !selectedHuntId) {
+      alert("Please complete the form.");
+      return;
+    }
+    // Store values in cookies and send (redirecy)to app.html
+    setCookie("playerName", playerName);
+    setCookie("uuid", selectedHuntId);
+    window.location.href = "app.html";
+  });
+});
 </script>
 </body>
 </html>

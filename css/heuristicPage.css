@@ -1,0 +1,108 @@
+.container{
+    max-width: 800px;
+    margin: 5.50rem auto 8rem;
+}
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-top: 100px;
+}
+
+.headers {
+    color: var(--primary-hover);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#feedbackPar {
+    background-color: var(--white);
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.heuristic {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.heuristicTH {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+.heuristicTD {
+    background-color: var(--white);
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.exist {
+    text-align: center;
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bold;
+}
+
+.heuristicIssues {
+    color: red;
+    font-weight: bold;
+}
+
+#feedbacklist {
+    margin-top: 50px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#feedbacks {
+    color: var(--primary-hover);
+    margin-bottom: 20px;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comments table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comments .heuristicTH {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px;
+}
+
+.comments .heuristicTD {
+    background-color: var(--white);
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .headers {
+        font-size: 1.2rem;
+    }
+
+    .heuristicTH, .heuristicTD {
+        padding: 10px;
+    }
+    .container{
+        margin: 0 1rem;
+    }
+}

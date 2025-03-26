@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unit Testing Report - Treasure Hunt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/unitTesting.css">
+</head>
+<body>
+
+<header class="sticky-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html" class="btn">
+        <img src="assets/logos/treasure.svg" alt="TeamD Logo">
+      </a>
+    </div>
+    <h1>Unit Testing Report</h1>
+
+    <div class="burger-menu" id="burger-menu">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="btn">Home</a>
+      <a href="notes.html" class="btn">Notes</a>
+      <a href="test.html" class="btn">Test</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2 class="headers">26/03/24 - 16:00 | Initial API Start Test</h2>
+
+  <table class="heuristic">
+    <tr>
+      <th class="heuristicTH">Scenario</th>
+      <th class="heuristicTH">Expected Output</th>
+      <th class="heuristicTH">Actual Outcome</th>
+      <th class="heuristicTH">Result</th>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Valid User Name</td>
+      <td class="heuristicTD">Moves to Quiz</td>
+      <td class="heuristicTD">Moves to Quiz</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Repeated Name</td>
+      <td class="heuristicTD">Asks for Another Name</td>
+      <td class="heuristicTD">Shows Prompt, Ends Game</td>
+      <td class="heuristicIssues">✖</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Numeric Input</td>
+      <td class="heuristicTD">Moves to Quiz</td>
+      <td class="heuristicTD">Moves to Quiz</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Excessive Characters (50)</td>
+      <td class="heuristicTD">Request Another Name</td>
+      <td class="heuristicTD">No Prompt, Ends Game</td>
+      <td class="heuristicIssues">✖</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Empty Field</td>
+      <td class="heuristicTD">Quiz Stays Inactive</td>
+      <td class="heuristicTD">Quiz Does Not Start</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Script Injection</td>
+      <td class="heuristicTD">Rejects Entry</td>
+      <td class="heuristicTD">No Prompt, Ends Game</td>
+      <td class="heuristicIssues">✖</td>
+    </tr>
+  </table>
+
+  <p id="feedbackPar">Note: The test exposed persistent issues with HTML/script injection. Recommended as a critical fix.</p>
+
+  <h2 class="headers">26/03/24 - 17:23 | Follow-up Test Post Fix</h2>
+
+  <table class="heuristic">
+    <tr>
+      <th class="heuristicTH">Scenario</th>
+      <th class="heuristicTH">Expected Outcome</th>
+      <th class="heuristicTH">Final Response</th>
+      <th class="heuristicTH">Result</th>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Valid Name</td>
+      <td class="heuristicTD">Quiz Launches</td>
+      <td class="heuristicTD">Quiz Launches</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Name Duplicate</td>
+      <td class="heuristicTD">Request Renaming</td>
+      <td class="heuristicTD">Request Renaming</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Number Only</td>
+      <td class="heuristicTD">Prompt Renaming</td>
+      <td class="heuristicTD">Prompt Renaming</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">50+ Character Name</td>
+      <td class="heuristicTD">Reject Input</td>
+      <td class="heuristicTD">Reject Input</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Blank Field</td>
+      <td class="heuristicTD">Stay on Form</td>
+      <td class="heuristicTD">Stay on Form</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">HTML Injection Attempt</td>
+      <td class="heuristicTD">Input Blocked</td>
+      <td class="heuristicTD">Input Blocked</td>
+      <td class="exist">✔</td>
+    </tr>
+  </table>
+
+  <p id="feedbackPar">Validation improved. Test cases passed successfully after adjustments.</p>
+
+  <h2 class="headers">29/03/24 - Parameter Check Completion</h2>
+
+  <table class="heuristic">
+    <tr>
+      <th class="heuristicTH">API Parameter</th>
+      <th class="heuristicTH">Explanation</th>
+      <th class="heuristicTH">Completion</th>
+    </tr>
+    <tr>
+      <td class="heuristicTD">correct</td>
+      <td class="heuristicTD">Determines if submitted answer is valid</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">completed</td>
+      <td class="heuristicTD">Shows if session ended</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">expired</td>
+      <td class="heuristicTD">Checks for session timeout</td>
+      <td class="exist">✔</td>
+    </tr>
+  </table>
+
+</main>
+
+<script src="js/main.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-img">
+                <a href="https://www.facebook.com/profile.php?id=61574386045852" target="_blank">
+                    <img src="assets/logos/facebook-logo.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/teamd129/following/?hl=en" target="_blank">
+                    <img src="assets/logos/instagram-logo.svg" alt="Instagram">
+                </a>
+                <a href="https://x.com/UclanTeamD" target="_blank">
+                    <img src="assets/logos/x-logo.svg" alt="Twitter">
+                </a>
+                <a href="https://discord.com/" target="_blank">
+                    <img src="assets/logos/discord-logo.svg" alt="Discord">
+                </a>
+            </div>
+            
+                <p>&copy; 2025 Development Team D. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

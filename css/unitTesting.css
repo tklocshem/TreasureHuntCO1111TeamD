@@ -1,0 +1,52 @@
+.container {
+    max-width: 1000px;
+    margin: 6rem auto;
+}
+
+.headers {
+    color: var(--primary-hover);
+    margin-top: 3rem;
+    font-size: 1.6rem;
+}
+
+.heuristic {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.heuristicTH {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 14px;
+    text-align: left;
+}
+
+.heuristicTD {
+    background-color: var(--white);
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.exist {
+    text-align: center;
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.heuristicIssues {
+    text-align: center;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#feedbackPar {
+    background-color: var(--white);
+    padding: 16px;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+

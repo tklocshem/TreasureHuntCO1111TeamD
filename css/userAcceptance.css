@@ -1,0 +1,72 @@
+.container {
+  max-width: 1000px;
+  margin: 6rem auto;
+}
+
+.headers {
+  color: var(--primary-hover);
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+#feedbackPar {
+  background-color: var(--white);
+  padding: 16px;
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.heuristic {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.heuristicTH {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 14px;
+  text-align: left;
+}
+
+.heuristicTD {
+  background-color: var(--white);
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.exist {
+  text-align: center;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.improvements {
+  background-color: var(--white);
+  padding: 20px;
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  margin-top: 20px;
+  list-style-type: disc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.improvements li {
+  margin-bottom: 12px;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .headers {
+    font-size: 1.4rem;
+  }
+  .heuristicTH, .heuristicTD {
+    padding: 12px;
+  }
+  .container {
+    margin: 0 1rem;
+  }
+}

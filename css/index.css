@@ -1,26 +1,17 @@
-/* define light colors */
-:root {
-    --dark-gray: #333;
-    --light-gray: #f5f5f5;
-}
-
-/* container Styling */
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 5.50rem auto 8rem;
     padding: 20px;
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Heading Styling */
 h2 {
     color: var(--primary);
     font-weight: bold;
 }
 
-/* Team List Styling */
 .team-list {
     list-style: none;
     padding: 0;
@@ -30,7 +21,6 @@ h2 {
     font-size: 16px;
     margin: 5px 0;
 }
-
 /* Start Button Styling */
 .start-btn {
     display: inline-block;
@@ -49,23 +39,12 @@ h2 {
 .start-btn:hover {
     background-color: var(--primary-hover);
 }
-
-/* Additional Styling for Sections */
-section {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
+section a {
+    color: var(--primary);
+    font-weight: normal;
+    text-decoration: none;
 }
-
-/* Link Styling */
-a {
+section a:hover {
     text-decoration: underline;
 }
 
-/* Paragraph Styling */
-p {
-    font-size: 14px;
-    line-height: 1.5; /* Fixed from 1.5px */
-    color: var(--dark-gray);
-}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Acceptance Report - Treasure Hunt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/userAcceptance.css">
+</head>
+<body>
+
+<header class="sticky-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html" class="btn">
+        <img src="assets/logos/treasure.svg" alt="TeamD Logo">
+      </a>
+    </div>
+    <h1>User Acceptance</h1>
+
+    <div class="burger-menu" id="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="btn">Home</a>
+      <a href="notes.html" class="btn">Notes</a>
+      <a href="test.html" class="btn">Test</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2 class="headers">User Feedback Summary</h2>
+  <p id="feedbackPar">
+    The treasure hunt application was presented to external participants and non-developers for usability evaluation. 
+    Feedback suggested enhancing the design flow during quiz stages to improve player experience.
+  </p>
+
+  <h2 class="headers">Usability Highlights</h2>
+  <table class="heuristic">
+    <tr>
+      <th class="heuristicTH">Aspect</th>
+      <th class="heuristicTH">Observations</th>
+      <th class="heuristicTH">Status</th>
+    </tr>
+    <tr>
+      <td class="heuristicTD">System Feedback</td>
+      <td class="heuristicTD">Players receive real-time updates and error prompts during gameplay.</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Navigation Simplicity</td>
+      <td class="heuristicTD">Flow remains clear and intuitive with minimal interruptions.</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Design Consistency</td>
+      <td class="heuristicTD">Uniform styles and elements are maintained across all pages.</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Error Handling</td>
+      <td class="heuristicTD">Appropriate alerts guide users when incorrect input is provided.</td>
+      <td class="exist">✔</td>
+    </tr>
+    <tr>
+      <td class="heuristicTD">Restart Option</td>
+      <td class="heuristicTD">Users can restart or rejoin the hunt seamlessly if disconnected.</td>
+      <td class="exist">✔</td>
+    </tr>
+  </table>
+
+  <h2 class="headers">Key Improvement Points</h2>
+  <ul class="improvements">
+    <li>Add a dedicated <b>Hint</b> feature to assist players during tougher questions.</li>
+    <li>Enhance mobile responsiveness for smaller screens.</li>
+    <li>Integrate smoother transitions between question and result screens.</li>
+    <li>Optimize color contrast for better readability in quiz mode.</li>
+  </ul>
+
+  <h2 class="headers">Conclusion</h2>
+  <p id="feedbackPar">
+    Overall, testers found the application functional and user-friendly. Minor enhancements focused on visuals and gameplay flow will improve the experience further. Future versions will integrate additional accessibility features based on this feedback.
+  </p>
+
+</main>
+
+<script src="js/main.js"></script>
+<footer>
+    <div class="footer-content">
+        <div class="footer-img">
+            <a href="https://www.facebook.com/profile.php?id=61574386045852" target="_blank">
+                <img src="assets/logos/facebook-logo.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/teamd129/following/?hl=en" target="_blank">
+                <img src="assets/logos/instagram-logo.svg" alt="Instagram">
+            </a>
+            <a href="https://x.com/UclanTeamD" target="_blank">
+                <img src="assets/logos/x-logo.svg" alt="Twitter">
+            </a>
+            <a href="https://discord.com/" target="_blank">
+                <img src="assets/logos/discord-logo.svg" alt="Discord">
+            </a>
+        </div>
+        
+            <p>&copy; 2025 Development Team D. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

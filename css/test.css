@@ -1,0 +1,31 @@
+/* Center the container */
+.container {
+    max-width: 900px;
+    margin: 8rem auto;
+    text-align: center;
+}
+
+.container a {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 30px;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.container a:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container a {
+        width: 80%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

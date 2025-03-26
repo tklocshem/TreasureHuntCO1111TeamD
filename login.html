@@ -1,42 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign page</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treasure Hunt Login</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
 <header class="sticky-header">
-    <div class="header-container">
-        <div class="logo">
-            <a href="index.html" class="btn">
-                <img src="assets/logos/treasure.png" alt="TeamD Logo">
-            </a>
-        </div>
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html" class="btn">
+        <img src="assets/logos/treasure.png" alt="TeamD Logo" />
+      </a>
     </div>
+  </div>
 </header>
 
 <main class="container">
-    <div class="register-box">
-        <h2>Let's Start</h2>
-        <form>
-            <div class="input-box">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter Username" required>
-            </div>
-            <div class="input-box">
-                <label for="Password">Password</label>
-                <input type="Password" id="Password" name="Password" placeholder="Enter your Password" required>
-            </div>
-            <button type="submit">Sign up</button>
-        </form>
-    </div>
+  <div class="register-box">
+    <h2>Start Your Adventure</h2>
+    <form id="playerForm">
+      <div class="input-box">
+        <label for="fname">Player Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter Your Name" required />
+      </div>
+      <div class="input-box">
+        <label for="huntSelect">Select a Treasure Hunt:</label>
+        <select id="huntSelect"></select>
+      </div>
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
 </main>
 
+<script>
+function setCookie(name, value, days = 1) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()};path=/`;
+}
+
+async function fetchList(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.status === "OK" ? data.treasureHunts : [];
+  } catch (err) {
+    console.error("Error fetching hunts:", err);
+    return [];
+  }
+}
+
+async function fetchHunts() {
+  return await fetchList("https://codecyprus.org/th/api/list");
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const huntSelect = document.getElementById("huntSelect");
+  const hunts = await fetchHunts();
+
+  if (hunts.length === 0) {
+    alert("No available Treasure Hunts found.");
+    document.querySelector("button[type='submit']").disabled = true;
+    return;
+  }
+
+  hunts.forEach(hunt => {
+    const opt = document.createElement("option");
+    opt.value = hunt.uuid;
+    opt.textContent = hunt.name || "Untitled Hunt";
+    huntSelect.appendChild(opt);
+  });
+
+  document.getElementById("playerForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const playerName = document.getElementById("fname").value.trim();
+    const selectedHuntId = huntSelect.value;
+
+    if (!playerName || !selectedHuntId) {
+      alert("Please complete the form.");
+      return;
+    }
+
+    setCookie("playerName", playerName);
+    setCookie("uuid", selectedHuntId);
+    window.location.href = "app.html";
+  });
+});
+</script>
 </body>
 </html>
-
-
-
